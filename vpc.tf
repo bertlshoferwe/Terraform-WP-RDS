@@ -18,6 +18,7 @@ module "vpc" {
   //enable dns suppport
   enable_dns_hostnames = true
   enable_dns_support   = true
+  map_public_ip_on_launch = true  # Ensure public IP is associated automatically
 }
 
 resource "aws_eip" "nat" {
