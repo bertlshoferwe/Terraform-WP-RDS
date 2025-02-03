@@ -15,4 +15,6 @@ resource "aws_db_instance" "rds_instance" {
   password               = var.db-password
   db_subnet_group_name   = aws_db_subnet_group.rds_subnet_group.name
   vpc_security_group_ids = [aws_security_group.rds_security_group.id]
+  multi_az               = true
+  availability_zone      = null 
 }
